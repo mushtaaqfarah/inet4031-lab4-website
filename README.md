@@ -1,16 +1,18 @@
-# INET4031 - Module 6 - Working with Remote Systems
+# inet4031-lab4-website
 
-## Instructions, files, code for Lab 6.
+This repository contains **my Lab 4 website** for INET 4031.  
+The goal of this lab was to practice working with GitHub, cloning repositories, and modifying a local HTML file to make it my own.
 
-What if you aren't nearby the computer you need to work on?
+The webpage demonstrates:
+- How a local `.html` file can be opened in a browser (no internet needed).
+- The difference between **HTML** (declarative structure) and **JavaScript** (imperative interaction).
+- A simple example of turning a light bulb image on and off using JavaScript.
 
-Up until this point, our Lab activities have been accomplished by doing them on our laptops.
+## How to View the Page
+1. Clone this repository.
+2. Open `webpagewithjs.html` in any modern web browser.
+3. Click the ON/OFF buttons to see the lightbulb toggle.
 
-In this activity we explore the concept of "servers."  Which typically aren't located where we are.
-
-We have to connect to them remotely
-
-This Lab explores that concept.
-
-
-
+## Files
+- `webpagewithjs.html` — HTML + CSS + JS combined page.
+- `pic_bulboff.gif` / `pic_bulbon.gif` — images for the lightbulb.
