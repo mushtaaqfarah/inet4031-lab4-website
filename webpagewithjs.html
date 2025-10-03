@@ -1,18 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mushtaaq — Lab 4: Local HTML + JavaScript</title>
+  <style>
+    body {
+      background-color: lightblue; /* 👈 You can change this to any color you like */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 40px;
+      color: #1d2734;
+      line-height: 1.5;
+    }
+    h1 {
+      margin-bottom: 0.25rem;
+    }
+    .sub {
+      margin-top: 0;
+      color: #4d6075;
+      font-size: 0.95rem;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e9f2;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 680px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    img {
+      width: 120px;
+      height: auto;
+      display: block;
+      user-select: none;
+    }
+    button {
+      padding: 10px 14px;
+      border: 1px solid #d4dceb;
+      background: #f2f6ff;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover {
+      background: #e7efff;
+    }
+    .note {
+      margin-top: 12px;
+      color: #516278;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
 <body>
+  <h1>Hi, I’m Mushtaaq 👋</h1>
+  <p class="sub">Lab 4 — A local HTML file rendered by my browser with a little bit of JavaScript.</p>
 
-<h2>Simple Web Page with HTML and JavaScript</h2>
+  <div class="card">
+    <p>
+      This page is stored on <strong>my computer</strong>, not on the internet. The browser reads the 
+      <code>.html</code> file and displays it. The HTML is <em>declarative</em> (it defines the structure and look),
+      while the JavaScript is <em>imperative</em> (it runs when I click and changes what I see).
+    </p>
 
-<p>JavaScript can change HTML attribute values.</p>
+    <div class="row">
+      <img id="bulb" src="pic_bulboff.gif" alt="Light bulb" />
+      <div class="row">
+        <button onclick="turnOn()">Turn Light ON</button>
+        <button onclick="turnOff()">Turn Light OFF</button>
+      </div>
+    </div>
 
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <p class="note">
+      The GIFs used here are <code>pic_bulboff.gif</code> and <code>pic_bulbon.gif</code> from the instructor’s repo.
+    </p>
+  </div>
 
-<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+  <script>
+    // Correct GIF filenames
+    const OFF_GIF = "pic_bulboff.gif";
+    const ON_GIF  = "pic_bulbon.gif";
 
-<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+    const bulb = document.getElementById("bulb");
 
-<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+    function turnOn() {
+      bulb.src = ON_GIF;
+    }
 
+    function turnOff() {
+      bulb.src = OFF_GIF;
+    }
+  </script>
 </body>
 </html>
